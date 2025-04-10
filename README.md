@@ -60,14 +60,14 @@ bundle install
 bundle exec rspec
 ```
 
-## Running with Docker
+## Running with Docker Compose
 
 ### In Windows Command Prompt or PowerShell
 
 1. Navigate to the project directory:
 
 ```cmd
-cd  \ruby\simplepractice-test
+cd  simplepractice-test
 ```
 
 2. Build and run tests with Docker Compose:
@@ -116,12 +116,6 @@ docker run simplepractice-test
 docker run -it simplepractice-test
 ```
 
-4. Run with additional parameters or environment variables:
-
-```bash
-docker run -it -e HEADLESS=false simplepractice-test bundle exec rspec --format documentation
-```
-
 ## Running with Docker Hub Image
 
 You can use a prebuilt Docker image from Docker Hub to run the tests without needing to build the image locally:
@@ -146,13 +140,6 @@ docker-compose run --rm test
 
 ```bash
 docker-compose run --rm test bundle exec rspec --format documentation
-```
-
-For interactive mode:
-
-```bash
-docker run -it rubnvaz/simplepractice-test:latest /bin/bash
-bundle exec rspec
 ```
 
 ## Notes
