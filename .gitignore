@@ -1,0 +1,58 @@
+# Archivos temporales del sistema operativo
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Directorios y archivos específicos de Ruby y Bundler
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+vendor/bundle
+
+# Capturas de pantalla y archivos generados durante las pruebas
+/screenshots/
+/logs/
+/reports/
+/results/
+*.log
+
+# Variables de entorno y configuraciones locales
+.env
+.env.*
+!.env.example
+config/credentials.yml.enc
+config/master.key
+
+# Archivos de dependencias y paquetes
+.bundle/
+.ruby-version
+.ruby-gemset
+
+# Archivos específicos de IDEs y editores
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+*.swp
+*~
+.project
+.settings
+.classpath
+
+# Docker
+.docker-sync/
+
+# Documentos y archivos varios que a menudo se desean ignorar
+*.pdf
+*.zip
+*.tar.gz
+*.rar

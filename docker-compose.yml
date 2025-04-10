@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  test:
+    build: .
+    container_name: simplepractice-test-runner # Easy to reference container name
+    volumes:
+      - ./spec:/app/spec  # Only mount the spec directory, not the gems
+      - ./README.md:/app/README.md  # Mount README separately
+    environment:
+      - DISPLAY=:99 # Virtual display for running GUI applications
+      - NO_SANDBOX=true # Required for running Chrome in Docker
+      - HEADLESS=true # Run Chrome in headless mode
+    shm_size: "2gb" # Shared memory for Chrome to prevent crashes
+    command: >
+      bash -c "Xvfb :99 -screen 0 1920x1080x24 > /dev/null 2>&1 &  # Start virtual framebuffer
+              bundle exec rspec"  # Run the tests
